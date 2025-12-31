@@ -4,34 +4,31 @@
   <meta charset="UTF-8">
   <title>Poemario</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <main class="poemario">
+  <header class="pdf-header">
+    <div class="left">
+      <span class="filename">Poemario.pdf</span>
+    </div>
 
-  <div class="page-indicator" id="pageIndicator">
-  Página 1–2 de 28
-</div>
+    <div class="center">
+      <span id="pageInfo">1 / 33</span>
+    </div>
 
-
-<div class="book">
-  <div class="page">
-    <img id="leftPage" src="img/1.png" alt="">
+  <div class="right">
+    <button onclick="zoomOut()">−</button>
+    <span id="zoomLabel">100%</span>
+    <button onclick="zoomIn()">+</button>
   </div>
-  <div class="page">
-    <img id="rightPage" src="img/2.png" alt="">
-  </div>
-</div>
 
-<div class="controls">
-  <button class="prev" onclick="prevPage()">←</button>
-  <button class="next" onclick="nextPage()">→</button>
-</div>
+
+  </header>
+
+  <main class="viewer" id="viewer"></main>
 
   <script src="script.js"></script>
-  </main>
 
 </body>
 </html>
